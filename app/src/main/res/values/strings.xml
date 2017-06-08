@@ -1,5 +1,15 @@
 <resources>
     <string name="app_name">CvApp</string>
+    <string name="person_name">Yannick Servranckx</string>
+
+    txtWhoAmI
+    <string name="txtWhoAmI">
+        Mijn naam is Yannick Servranckx.
+        Ik ben 23 jaar oud en woon in Terjoden.
+        Nu ik bijna ben afgestudeerd aan Hogeschool Gent ben ik niet van plan om te stoppen met bij te leren.
+        Net zoals tijdens het gamen ga ik op zoek naar de uitdaging en zal ik steeds proberen mijn vaardigheden te verbeteren.
+        Hierbij heb ik altijd oog voor het eindresultaat en zal ik alles geven om dit te voltooien.
+          </string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
 
