@@ -1,4 +1,4 @@
-package ys.cvapp.adapters;
+package ys.cvapp.overbodig;
 
 import android.content.Context;
 import android.view.LayoutInflater;

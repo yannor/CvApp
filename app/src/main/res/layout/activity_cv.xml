@@ -34,8 +34,9 @@
     </android.support.design.widget.AppBarLayout>
 
 
-    <include layout="@layout/content_cv"
-        android:id="@+id/layContent"/>
+
+    <include layout="@layout/content_cv"/>
+
 
 
 

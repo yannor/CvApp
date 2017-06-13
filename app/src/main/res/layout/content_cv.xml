@@ -22,15 +22,19 @@
         android:text="@string/txtWhoAmI" />
 
 
-    <Button
-        android:id="@+id/btnPersoonsGegevens"
+
+    <TextView
+        android:id="@+id/txtGegevens"
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginBottom="4dp"
         android:background="@color/colorAccent"
-        android:text="Persoonsgegevens" />
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="Persoonsgegegevens" />
 
 <TableLayout
     android:layout_width="match_parent"
@@ -42,8 +46,7 @@
     <TableRow>
         <TextView
             android:text="Naam:"
-            android:padding="3dip"
-            android:textStyle="bold" />
+            android:padding="3dip" />
         <TextView
             android:text="Servranckx Yannick"
             android:gravity="right"
@@ -55,8 +58,7 @@
     <TableRow>
         <TextView
             android:text="Telefoon:"
-            android:padding="3dip"
-            android:textStyle="bold"/>
+            android:padding="3dip" />
         <TextView
             android:text="0478/35.81.69 "
             android:gravity="right"
@@ -68,8 +70,7 @@
     <TableRow>
         <TextView
             android:text="Emailadres:"
-            android:padding="3dip"
-            android:textStyle="bold"/>
+            android:padding="3dip" />
         <TextView
             android:text="yannick.servranckx@hotmail.com "
             android:gravity="right"
@@ -81,8 +82,7 @@
     <TableRow>
         <TextView
             android:text="Woonplaats:"
-            android:padding="3dip"
-            android:textStyle="bold"/>
+            android:padding="3dip" />
         <TextView
             android:text="9320, Erembodegem-Terjoden"
             android:gravity="right"
@@ -93,40 +93,70 @@
 
 </TableLayout>
 
-
-    <Button
-        android:id="@+id/btnOpleidingen"
+    <TextView
+        android:id="@+id/txtOpleidingen"
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:drawableLeft="@android:drawable/arrow"
+        android:layout_marginBottom="4dp"
         android:background="@color/colorAccent"
+        android:textStyle="bold"
+        android:textAlignment="center"
         android:text="Opleiding" />
 
-    <ListView
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/alternateLvCourses"
+        android:orientation="vertical"/>
+
+    <TextView
+        android:id="@+id/txtErvaring"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="20dp"
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
-        android:id="@+id/listCourses"
-        tools:listitem="@layout/row_courses">
-    </ListView>
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/colorAccent"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="Werkervaring" />
 
-    <ListView
+    <TextView
+        android:id="@+id/txtSkills"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:id="@+id/listWork">
+        android:layout_height="20dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/colorAccent"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="Vaardigheden" />
 
-    </ListView>
-    <ListView
+    <TextView
+        android:id="@+id/txtExtra"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:id="@+id/listExtra">
-    </ListView>
+        android:layout_height="20dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/colorAccent"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="Extra" />
 
 </LinearLayout>
+
+
+
 </android.support.v4.widget.NestedScrollView>
+
+
+
+
