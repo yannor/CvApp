@@ -20,6 +20,76 @@
         android:id="@+id/txtWhoAmI"
         android:text="@string/txtWhoAmI" />
 
+
+<TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_margin="@dimen/text_margin">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Persoonsgegevens"
+        android:layout_marginBottom="5dp"
+        />
+
+    <TableRow>
+        <TextView
+            android:text="Naam:"
+            android:padding="3dip"
+            android:textStyle="bold" />
+        <TextView
+            android:text="Servranckx Yannick"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:padding="3dip"
+            android:layout_weight="1" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="Telefoon:"
+            android:padding="3dip"
+            android:textStyle="bold"/>
+        <TextView
+            android:text="0478/35.81.69 "
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:padding="3dip"
+            android:layout_weight="1"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="Emailadres:"
+            android:padding="3dip"
+            android:textStyle="bold"/>
+        <TextView
+            android:text="yannick.servranckx@hotmail.com "
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:padding="3dip"
+            android:layout_weight="1"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="Woonplaats:"
+            android:padding="3dip"
+            android:textStyle="bold"/>
+        <TextView
+            android:text="9320, Erembodegem-Terjoden"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:padding="3dip"
+            android:layout_weight="1"/>
+    </TableRow>
+
+</TableLayout>
+
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
