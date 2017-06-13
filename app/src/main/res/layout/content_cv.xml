@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -21,19 +22,22 @@
         android:text="@string/txtWhoAmI" />
 
 
+    <Button
+        android:id="@+id/btnPersoonsGegevens"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorAccent"
+        android:text="Persoonsgegevens" />
+
 <TableLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="16dp"
-    android:layout_margin="@dimen/text_margin">
+    android:layout_marginRight="16dp"
+    android:layout_marginLeft="16dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:text="Persoonsgegevens"
-        android:layout_marginBottom="5dp"
-        />
 
     <TableRow>
         <TextView
@@ -90,17 +94,32 @@
 </TableLayout>
 
 
+    <Button
+        android:id="@+id/btnOpleidingen"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:drawableLeft="@android:drawable/arrow"
+        android:background="@color/colorAccent"
+        android:text="Opleiding" />
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:id="@+id/listCourses">
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:id="@+id/listCourses"
+        tools:listitem="@layout/row_courses">
     </ListView>
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
         android:id="@+id/listWork">
+
     </ListView>
     <ListView
         android:layout_width="match_parent"
@@ -108,5 +127,6 @@
         android:layout_margin="@dimen/text_margin"
         android:id="@+id/listExtra">
     </ListView>
+
 </LinearLayout>
 </android.support.v4.widget.NestedScrollView>

@@ -8,8 +8,20 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import ys.cvapp.adapters.CoursesAdapter;
+import ys.cvapp.domain.Course;
 
 public class Cv extends AppCompatActivity {
+
+    ListView lvCourses;
+
+    List<Course> lsCourses = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +29,14 @@ public class Cv extends AppCompatActivity {
         setContentView(R.layout.activity_cv);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
+
+        lsCourses.add(new Course("2012-heden", "Toegepaste informatica, mobile apps", "Hogeschool Gent, Campus Aalst"));
+        lsCourses.add(new Course("2010-2012", "Gezondheids- en Welzijnswetenschappen", "Sint-Augustinusinstituut, Aalst"));
+
+        lvCourses = (ListView) findViewById(R.id.listCourses);
+        lvCourses.setAdapter(new CoursesAdapter(this, lsCourses));
     }
 
     @Override
@@ -40,3 +60,4 @@ public class Cv extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 }
+
