@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtLang"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#DEEAF6"
+        android:text="Talenkennis"
+        android:textAlignment="center"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp">
+
+        <TableRow>
+            <TextView
+                android:layout_weight="1"
+                android:text="Nedelands: "/>
+            <TextView
+                android:layout_weight="3"
+                android:text="@string/taalNl"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_weight="1"
+                android:text="Engels: "/>
+            <TextView
+                android:layout_weight="3"
+                android:text="@string/taalEn"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_weight="1"
+                android:text="Frans: "/>
+            <TextView
+                android:layout_weight="3"
+                android:text="@string/taalFr"/>
+        </TableRow>
+
+    </TableLayout>
+
+
+    <TextView
+        android:id="@+id/txtTechSkills"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#DEEAF6"
+        android:text="Technische Vaardigheden"
+        android:textAlignment="center"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+            <TextView
+                android:text="Vaardigheid"
+                android:layout_weight="2"
+                android:textStyle="bold"/>
+            <TextView
+                android:text="Basis"
+                android:layout_weight="1"
+                android:textStyle="bold"/>
+            <TextView
+                android:text="Medium"
+                android:layout_weight="1"
+                android:textStyle="bold"/>
+            <TextView
+                android:text="Hoog"
+                android:layout_weight="1"
+                android:textStyle="bold"/>
+            <TextView
+                android:text="Expert"
+                android:layout_weight="1"
+                android:textStyle="bold"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/linTechSkills"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        />
+
+    <TextView
+        android:id="@+id/txtSoftSkills"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#DEEAF6"
+        android:text="Softskills"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/soft1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/soft2"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/soft3"/>
+
+
+
+</LinearLayout>
