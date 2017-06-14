@@ -15,13 +15,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ys.cvapp.domain.Course;
+import ys.cvapp.domain.Experience;
+import ys.cvapp.domain.Extra;
 
 public class Cv extends AppCompatActivity {
 
-    ListView lvCourses;
-
-    List<Course> lsCourses = new ArrayList<>();
-    private ViewGroup linCourses;
+    List<Course> lsCourses;
+    List<Extra> lsExtras;
+    List<Experience> lsExperiences;
+    ViewGroup linCourses, linExtras, linExperience;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,29 +32,32 @@ public class Cv extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        linCourses = (ViewGroup) findViewById(R.id.alternateLvCourses);
+        lsCourses = new ArrayList<>();
+        linCourses = (ViewGroup) findViewById(R.id.linCourses);
         lsCourses.add(new Course("2012-heden", "Toegepaste informatica, mobile apps", "Hogeschool Gent, Campus Aalst"));
         lsCourses.add(new Course("2010-2012", "Gezondheids- en Welzijnswetenschappen", "Sint-Augustinusinstituut, Aalst"));
-        addCourses(lsCourses);
+        for (Course c : lsCourses) {
+            addCourse(c);
+        }
 
-
+        lsExtras = new ArrayList<>();
+        linExtras = (ViewGroup) findViewById(R.id.linExtras);
+        lsExtras.add(new Extra("2017", "Hack The Future (Mobile)"));
+        lsExtras.add(new Extra("2015-2017", "Websitebeheer Gezinsbond Terjoden"));
+        lsExtras.add(new Extra("2012", "Vlaamse Programmeerwedstrijd"));
+        for (Extra e : lsExtras) {
+            addExtra(e);
+        }
     }
 
 
-    private void addCourses(List<Course> courses) {
-        for (Course c : courses) {
+    private void addCourse(Course c) {
 
         View rowCourse = LayoutInflater.from(this).inflate(R.layout.row_courses, linCourses, false);
 
 
-            StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.append(c.getsDateRange());
-            while (stringBuilder.length()<11)
-            {
-                stringBuilder.append(" ");
-            }
         TextView textDate = (TextView) rowCourse.findViewById(R.id.dateRange);
-        textDate.setText(stringBuilder+":");
+        textDate.setText(c.getsDateRange()+":");
 
         TextView textTitle = (TextView) rowCourse.findViewById(R.id.title);
         textTitle.setText(c.getsTitle());
@@ -61,7 +66,19 @@ public class Cv extends AppCompatActivity {
         textPlace.setText(c.getsPlace());
 
         linCourses.addView(rowCourse);
-        }
+    }
+
+    private void addExtra(Extra e) {
+
+        View rowExtra = LayoutInflater.from(this).inflate(R.layout.row_extras, linExtras, false);
+
+        TextView textDate = (TextView) rowExtra.findViewById(R.id.dateRange);
+        textDate.setText(e.getsDateRange()+":");
+
+        TextView textTitle = (TextView) rowExtra.findViewById(R.id.title);
+        textTitle.setText(e.getsTitle());
+
+        linExtras.addView(rowExtra);
     }
 }
 
